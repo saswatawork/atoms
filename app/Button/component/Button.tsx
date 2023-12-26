@@ -1,10 +1,16 @@
 import React from "react"
+import classNames from "classnames";
+import { BUTTON_THEME } from "../constant";
+import "./Button.scss";
 
-interface ButtonProps extends React.HTMLProps<HTMLButtonElement> { }
 
-export const Button = ({ children, type, ...props }: ButtonProps): JSX.Element => {
+interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
+    theme?: BUTTON_THEME
+}
 
-    return (<div className="my-2.5">
-        <button className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" {...props}> {children} </button>
-    </div>)
+export const Button = ({ children, type = 'button', theme = BUTTON_THEME.PRIMIARY, ...props }: ButtonProps): JSX.Element => {
+
+    return (
+        <button className={classNames("button", theme)} {...props}> {children} </button>
+    )
 }

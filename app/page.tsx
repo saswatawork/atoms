@@ -1,10 +1,7 @@
 "use client"
-import { SignUp } from './SignUp'
 
-export default function Home() {
-  return (
-    <main>
-      <SignUp />
-    </main>
-  )
+import { Home } from "./Home"
+
+export default function DefaultPage() {
+  return <Home />
 }
