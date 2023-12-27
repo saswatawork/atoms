@@ -1,6 +1,7 @@
 import { BUTTON_THEME, Button } from "@/app/Button";
 import { useSignUp } from "../hook/useSignUp"
 import { TextInput } from "@/app/TextInput";
+import { CheckBox } from "@/app/CheckBox";
 import "./SignUp.scss"
 
 export const SignUp = (): JSX.Element => {
@@ -18,6 +19,8 @@ export const SignUp = (): JSX.Element => {
                 <TextInput maxLength={75} type='email' label="email address" placeholder="Enter email address" required name="email" inputControl={email} />
                 <TextInput required maxLength={10} name="phone" placeholder="Enter phone no." inputControl={phone} />
                 <TextInput required maxLength={25} name="password" label="Create password" placeholder="Enter password" inputControl={password} />
+                <CheckBox required name="terms" value="'I'd like being informed about latest news & tips" checkBoxControl={termsNcondition}/>
+
                 <div className="sign-up__button">
                     <Button type="submit"> Register Account </Button>
                     <span>or</span>
