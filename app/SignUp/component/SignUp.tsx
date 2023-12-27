@@ -5,7 +5,7 @@ import { CheckBox } from "@/app/CheckBox";
 import "./SignUp.scss"
 
 export const SignUp = (): JSX.Element => {
-    const { onSignUp, signUpState: { email, phone, password } } = useSignUp();
+    const { onSignUp, signUpState: { email, phone, password,termsNcondition } } = useSignUp();
 
     return (
         <div className="sign-up">
