@@ -3,6 +3,15 @@ $reverse-color:#ffffff;
 $default-font-color:#696F79;
 $heighlight-font-color:#000000;
 
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+ul,li{
+    list-style: none;
+}
+
 h1,h2,h3,h4,h5,h6,p,label{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
