@@ -1,0 +1,16 @@
+$base-color: #1565D8;
+$reverse-color:#ffffff;
+$default-font-color:#696F79;
+$heighlight-font-color:#000000;
+
+h1,h2,h3,h4,h5,h6,p,label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p,label{
+    font-size: 14px;
+    color: $default-font-color;
+}
+h1{
+    font-size: 32px;
+    color: $heighlight-font-color;
+}
