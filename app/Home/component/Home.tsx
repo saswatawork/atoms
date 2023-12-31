@@ -1,5 +1,3 @@
-import { LoginSignUp } from "@/app/LoginSignUp"
-
 export const Home = (): JSX.Element => {
-    return <LoginSignUp />
+    return <><a href="/SignUp">Sign Up</a> | <a href="/Login">Login</a></>
 }

@@ -1,0 +1,39 @@
+.sign-up {
+    min-width: 250px;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+            text-transform: capitalize;
+        }
+
+        p {
+            font-size: 14px;
+            color: #8692A6;
+        }
+    }
+
+    &__button {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        color: #BABABA;
+
+        .button {
+            width: 100%;
+
+        }
+    }
+
+}
