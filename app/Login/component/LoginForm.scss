@@ -1,4 +1,4 @@
-.sign-up {
+.login {
     min-width: 250px;
     max-width: 550px;
     display: flex;
@@ -29,6 +29,7 @@
         gap: 10px;
         align-items: center;
         color: #BABABA;
+        width: 100%;
 
         .button,
         a {

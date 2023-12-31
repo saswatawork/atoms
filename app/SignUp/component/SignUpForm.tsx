@@ -20,13 +20,15 @@ export const SignUpForm = (): JSX.Element => {
                 <TextInput required maxLength={10} name="phone" placeholder="Enter phone no." inputControl={phone} />
                 <TextInput required maxLength={25} name="password" label="Create password" placeholder="Enter password" inputControl={password} />
                 <CheckBox required name="terms" value="'I'd like being informed about latest news & tips" checkBoxControl={termsNcondition} />
-
-                <div className="sign-up__button">
-                    <Button type="submit"> Register Account </Button>
-                    <span>or</span>
-                    <Button type="button" theme={BUTTON_THEME.SECONDARY}> Register with Google </Button>
-                </div>
             </form>
+
+            <div className="sign-up__button">
+                <Button type="submit"> Register Account </Button>
+                <span>or</span>
+                <a href="/Login">
+                    <Button type="button" theme={BUTTON_THEME.SECONDARY}> Login </Button>
+                </a>
+            </div>
         </div>
     )
 } 
