@@ -1,10 +1,9 @@
 .ls {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    height: 100vh;
 
     .ls__form {
-        padding: 60px;
+        padding: 6rem;
         display: flex;
         align-items: center;
         justify-content: flex-start;
