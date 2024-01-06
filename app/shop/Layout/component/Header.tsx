@@ -27,8 +27,8 @@ export const Header = (): JSX.Element => {
                     <li><a href={`${SHOP_PATH}/sign-up`}>Sign Up</a></li>
                 </ul>
 
-                <div className="header__menu-search">ß
-                    <input placeholder="Search" />ß
+                <div className="header__menu-search">
+                    <input placeholder="Search" />
                     <button>Wish list</button>
                     <button>Cart</button>
                 </div>

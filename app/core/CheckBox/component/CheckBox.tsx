@@ -1,6 +1,6 @@
 import { InputHTMLAttributes } from "react";
 import { CheckBoxControlProps } from "../hook/useCheckBox";
-import { FormError } from "@/app/core/Button/Error";
+import { FormError } from "@/app/core/Error";
 import "./CheckBox.scss";
 
 

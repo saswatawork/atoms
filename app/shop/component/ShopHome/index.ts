@@ -1,1 +1,0 @@
-export { ShopHome } from './component/ShopHome'

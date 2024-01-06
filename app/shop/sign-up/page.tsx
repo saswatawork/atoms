@@ -1,6 +1,6 @@
 "use client"
 
-import { SignUp } from "../component/SignUp"
+import { SignUp } from "."
 
 export default function DefaultPage() {
   return <SignUp />

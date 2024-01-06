@@ -1,4 +1,4 @@
-import { FormError } from "@/app/core/Button/Error";
+import { FormError } from "@/app/core/Error";
 import { InputControlProps } from "../hook/useInput";
 import { InputHTMLAttributes } from "react";
 import './TextInput.scss';
