@@ -4,6 +4,7 @@ export interface Rating {
 }
 
 export interface ProductType {
+    id: number;
     category: string;
     image: string,
     description: string;

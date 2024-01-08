@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Eye, Love } from "@/app/core/Icons";
 import "./Product.scss";
 import { ProductType } from '..';
+import { SHOP_PATH } from '../../config';
 
 interface ProductProps {
     data: ProductType
@@ -9,22 +10,24 @@ interface ProductProps {
 
 export const Product = ({ data }: ProductProps): JSX.Element => {
 
-    const { category, image, description, price, rating: { count, rate }, title } = data;
+    const { id, category, image, description, price, rating: { count, rate }, title } = data;
     return (
         <div className="product">
             <div className="product__view">
                 <div className="product__view-discount">-40%</div>
-                <div className="product__view-image">
-                    <div className="product__view-image-responsive">
-                        <Image
-                            priority
-                            src={image}
-                            alt="Product 1"
-                            layout="fill"
-                            objectFit="contain"
-                        />
+                <a href={`${SHOP_PATH}/product/${id}`}>
+                    <div className="product__view-image">
+                        <div className="product__view-image-responsive">
+                            <Image
+                                priority
+                                src={image}
+                                alt="Product 1"
+                                layout="fill"
+                                objectFit="contain"
+                            />
+                        </div>
                     </div>
-                </div>
+                </a>
                 <div className="product__view-tools">
                     <Image
                         priority

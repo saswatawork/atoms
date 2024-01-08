@@ -19,3 +19,13 @@ export const getOurProducts = async () => {
     }
 }
 
+export const getProductDetails = async (id: string) => {
+    try {
+        const product = await fetch(`${PRODUCT_API_PATH}/${id}`);
+        return product.json();
+    } catch (error: any) {
+        throw new Error(error);
+    }
+}
+
+

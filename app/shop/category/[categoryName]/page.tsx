@@ -1,7 +1,7 @@
 "use client"
-import { useRouter } from 'next/router'
 
+import { MainContainer } from "../../shopLayout"
 
 export default function CategoryDeatilsHome({ params }: { params: { categoryName: string } }) {
-    return <div>My Post: {params.categoryName}</div>
+    return <MainContainer>My Post: {params.categoryName}</MainContainer>
 }

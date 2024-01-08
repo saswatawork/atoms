@@ -9,5 +9,6 @@ import SmartWatch from './SmartWatch.svg';
 import Camera from './Camera.svg';
 import HeadPhone from './HeadPhone.svg';
 import Gaming from './Phone.svg';
+import Shop from './Shop.svg';
 
-export { Banner, Eye, Logo, Love, Product1, Phone, Computer, SmartWatch, Camera, HeadPhone, Gaming };
+export { Banner, Eye, Logo, Love, Product1, Phone, Computer, SmartWatch, Camera, HeadPhone, Gaming, Shop };

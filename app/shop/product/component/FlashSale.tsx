@@ -5,12 +5,12 @@ export const FlashSale = (): JSX.Element => {
     return (
         <section className="flash-sale">
             <h2>Flash Sale</h2>
-            <ProductList>
+            {/* <ProductList>
                 <Product />
                 <Product />
                 <Product />
                 <Product />
-            </ProductList>
+            </ProductList> */}
         </section>
     )
 }

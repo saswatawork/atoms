@@ -1,5 +1,6 @@
-export { Product } from './Product'
-export { ProductList } from './ProductList'
+export { ProductHome } from './ProductHome';
+export { Product } from './Product';
+export { ProductList } from './ProductList';
 export { FlashSale } from './FlashSale';
 export { BestSellingProducts } from './BestSellingProducts';
 export { OurProducts } from './OurProducts';

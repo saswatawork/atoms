@@ -11,18 +11,19 @@ export default function ShopHome() {
         <ProductMenus />
         <ProductBanner />
       </section>
+
       <Categories />
       {/* <FlashSale />
       <BestSellingProducts /> */}
       <OurProducts />
 
-      <section className="new-arrival">
+      {/* <section className="new-arrival">
         <h2>New Arrival</h2>
       </section>
 
       <section className="features">
         <h2>Features</h2>
-      </section>
+      </section> */}
     </div>
   )
 }

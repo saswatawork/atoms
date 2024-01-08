@@ -1,5 +1,13 @@
 .product-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 3rem;
+    &__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        gap: 6rem 3rem;
+        margin: 1.5rem 0;
+    }
+
+    // &__view-all {
+    //     margin: 1.5rem 0;
+    // }
 }

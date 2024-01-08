@@ -1,9 +1,9 @@
 import { ReactNode } from "react"
 import { Footer } from "./Footer"
 import { Header } from "./Header"
-import "./Layout.scss"
+import "./ShopLayout.scss"
 
-export const Layout = ({ children }: { children: ReactNode | ReactNode[] }): JSX.Element => {
+export const ShopLayout = ({ children }: { children: ReactNode | ReactNode[] }): JSX.Element => {
     return (
         <main className="home">
             <Header />

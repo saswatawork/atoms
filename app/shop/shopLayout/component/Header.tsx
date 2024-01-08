@@ -17,9 +17,7 @@ export const Header = (): JSX.Element => {
             </section>
 
             <nav className="header__menu">
-                <h2>
-                    Exclusive
-                </h2>
+                <h3>Exclusive</h3>
                 <ul className="header__menu-items">
                     <li><a href={SHOP_PATH}>Home</a></li>
                     <li><a href={`${SHOP_PATH}/about`}>About</a></li>
