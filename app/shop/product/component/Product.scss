@@ -7,10 +7,19 @@
         position: relative;
         background: #F5F5F5;
 
+        a {
+            display: flex;
+            justify-content: center;
+        }
+
         &-image {
             padding: 5rem 0;
+            min-width: 15rem;
+            width: 25rem;
             cursor: pointer;
             height: 15rem;
+            display: flex;
+            justify-content: center;
 
             &-responsive {
                 width: 100%;
