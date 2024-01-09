@@ -1,0 +1,34 @@
+.product-details {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 7rem;
+
+
+    &__gallery {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 3rem;
+
+        &-thumb {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 1.6rem;
+
+            &-item {
+                background-color: #F5F5F5;
+                padding: 2.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        &-main {
+            background-color: #F5F5F5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+        }
+    }
+}

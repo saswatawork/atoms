@@ -1,0 +1,14 @@
+.category {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    gap: 1.6rem;
+    padding: 1.6rem 1.8rem;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.30);
+    color: #000;
+
+    &__name {
+        text-transform: capitalize;
+    }
+}

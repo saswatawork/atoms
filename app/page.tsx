@@ -3,5 +3,7 @@
 import { Home } from "./Home"
 
 export default function DefaultPage() {
-  return <Home />
+  return (
+    <Home />
+  )
 }

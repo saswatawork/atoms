@@ -1,0 +1,61 @@
+.header {
+    .sale {
+        background-color: black;
+        color: #fff;
+        padding: 1rem 10rem;
+        display: grid;
+        grid-template-columns: 1fr 75px;
+
+        &__desc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.8rem;
+
+
+            p,
+            a {
+                color: #fff;
+                margin: 0;
+            }
+
+            a {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+
+        &__lang {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+
+    &__menu {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 3rem 10rem 1.6rem 10rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        align-items: center;
+
+        h2 {
+            margin: 0;
+        }
+
+        &-items {
+            display: flex;
+            padding: 0 1rem;
+            gap: 2.8rem;
+
+            a {
+                color: #000;
+            }
+        }
+
+        &-search {
+            justify-self: flex-end;
+        }
+    }
+}

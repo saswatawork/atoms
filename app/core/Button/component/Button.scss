@@ -1,0 +1,21 @@
+.button {
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    border-radius: 6px;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &.primary {
+        color: #fff;
+        background: #DB4444;
+    }
+
+    &.secondary {
+        color: #000;
+        background: #FFF;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.08);
+    }
+}
