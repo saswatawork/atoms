@@ -1,20 +1,20 @@
 "use client"
 
 import "./ShopHome.scss"
-import { Categories } from "./category"
-import { BestSellingProducts, FlashSale, OurProducts, ProductBanner, ProductMenus } from "./product"
+import { Categories, CategoryList } from "./category"
+import { BestSellingProducts, OurProducts, ProductBanner } from "./product"
 
 export default function ShopHome() {
   return (
     <div className="home-container">
       <section className="product-menu">
-        <ProductMenus />
+        <CategoryList />
         <ProductBanner />
       </section>
 
+      <BestSellingProducts />
       <Categories />
-      {/* <FlashSale />
-      <BestSellingProducts /> */}
+      {/* <FlashSale /> */}
       <OurProducts />
 
       {/* <section className="new-arrival">

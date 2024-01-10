@@ -1,15 +1,12 @@
 import { Product, ProductList } from "."
+import { useBestSellingProducts } from "..";
 
 export const BestSellingProducts = (): JSX.Element => {
+    const { products } = useBestSellingProducts();
+
     return (
-        <section className="best-selling-products">
-            <h2>Best Selling Products</h2>
-            {/* <ProductList>
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-            </ProductList> */}
-        </section>
+        <ProductList heading="This Month" subHeading="Best Selling Products">
+            {products.map(product => <Product key={product.title} data={product} />)}
+        </ProductList>
     )
 }

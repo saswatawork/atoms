@@ -1,1 +1,7 @@
-export { getAllProducts, getOurProducts, getProductDetails } from "./ProductService"
+export {
+    getAllProducts,
+    getOurProducts,
+    getProductDetails,
+    getProductsByCategory,
+    getBestSellingProducts
+} from "./ProductService"

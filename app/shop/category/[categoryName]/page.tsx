@@ -1,7 +1,13 @@
 "use client"
 
+import { ProductsByCategory } from "../../product"
 import { MainContainer } from "../../shopLayout"
 
-export default function CategoryDeatilsHome({ params }: { params: { categoryName: string } }) {
-    return <MainContainer>My Post: {params.categoryName}</MainContainer>
+export default function CategoryDeatilsHome({ params: { categoryName } }: { params: { categoryName: string } }) {
+    const decodedCategoryName = decodeURI(categoryName);
+    return (
+        <MainContainer>
+            <ProductsByCategory category={decodedCategoryName} />
+        </MainContainer>
+    )
 }

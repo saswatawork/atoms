@@ -1,4 +1,10 @@
 .product-list {
+
+    h2,
+    h3 {
+        text-transform: capitalize;
+    }
+
     &__items {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -6,8 +12,4 @@
         gap: 6rem 3rem;
         margin: 1.5rem 0;
     }
-
-    // &__view-all {
-    //     margin: 1.5rem 0;
-    // }
 }
