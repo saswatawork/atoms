@@ -1,3 +1,4 @@
+import { DashboardHeader } from '../../Header/component/header'
 import './home.scss'
 
 export const DashboardHome = ()=>{
@@ -15,7 +16,7 @@ export const DashboardHome = ()=>{
         </ul>
        </div>
        <div className='dashboardContetnt'>
-            <div className='contentHeader'></div>
+            <DashboardHeader/>
             <div className='contentArea'>  
                 <div className='contentBlocks'>
                     <div>1</div>
