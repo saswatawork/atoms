@@ -1,0 +1,12 @@
+.ls {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+
+    .ls__form {
+        padding: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+    }
+}

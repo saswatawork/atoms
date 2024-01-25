@@ -1,0 +1,103 @@
+.product {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1.6rem;
+
+    &__view {
+        position: relative;
+        background: #F5F5F5;
+
+        a {
+            display: flex;
+            justify-content: center;
+        }
+
+        &-image {
+            padding: 5rem 0;
+            min-width: 15rem;
+            width: 25rem;
+            cursor: pointer;
+            height: 15rem;
+            display: flex;
+            justify-content: center;
+
+            &-responsive {
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+        }
+
+        &-discount {
+            background-color: #DB4444;
+            padding: 0.4rem 1.2rem;
+            border-radius: 0.4rem;
+            position: absolute;
+            top: 1.2rem;
+            left: 1.2rem;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        &-tools {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            cursor: pointer;
+        }
+
+        &-cart {
+            background-color: #000;
+            color: #fff;
+            font-size: 1.6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.8rem 0;
+            cursor: pointer;
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        &-name {
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
+
+        &-price {
+            font-size: 1.6rem;
+            display: flex;
+            gap: 1.2rem;
+
+            &-discount {
+                color: #DB4444;
+            }
+
+            &-original {
+                opacity: 0.5;
+                text-decoration: line-through;
+            }
+
+        }
+
+        &-rating {
+            display: flex;
+            gap: 0.8rem;
+
+            &-star {
+                color: #FFAD33;
+            }
+
+            &-user {
+                opacity: 0.5;
+            }
+        }
+    }
+}

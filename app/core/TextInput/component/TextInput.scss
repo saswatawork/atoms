@@ -1,0 +1,25 @@
+.text-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 8px 0;
+
+    &__label {
+        text-transform: capitalize;
+    }
+
+    &__wrapper {
+
+        input {
+            border-radius: 4px;
+            border: 1px solid #8692A6;
+            height: 3rem;
+            width: 100%;
+
+            &::placeholder {
+                text-transform: capitalize;
+            }
+
+        }
+    }
+}
