@@ -9,6 +9,7 @@ export const Home = (): JSX.Element => {
                 <ul className="home__container-items">
                     <li><a href="/dashboard">Dashboard</a></li>
                     <li><a href="/shop">Shop</a></li>
+                    <li><a href="/api">API</a></li>
                 </ul>
             </div>
         </main>
