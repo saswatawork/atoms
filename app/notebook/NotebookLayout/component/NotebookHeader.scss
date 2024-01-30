@@ -1,0 +1,20 @@
+@import "../../globalcss/variable.scss";
+
+.notebook_header{
+    display: flex;
+    justify-content: space-between;
+    background-color: $base-color;
+    ul{
+        display: flex;
+        li {
+           a,span{
+             padding: 30px 20px 24px;
+             display: block;
+            }
+            .search_wrapper{
+                padding: 25px 20px 24px 20px;
+            }
+        }
+    }
+    
+}

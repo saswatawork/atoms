@@ -1,0 +1,82 @@
+@import './variable.scss';
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p,
+label {
+    font-size:0.80rem;
+    color: $default-font-color;
+}
+
+p {
+    margin: 1rem 0;
+}
+h1{
+    font-size: 1.4rem;
+    color: $heighlight-font-color;
+    b{
+        color: $highlight-color;
+    }
+    span{
+        background-color: $highlight-color;
+        font-size: 1.9rem;
+        color: $reverse-font-color;
+    }
+    
+}
+h2 {
+    font-size: .8rem;
+    color: $heighlight-font-color;
+    b{
+        color: $highlight-color;
+    }
+    span{
+        background-color: $highlight-color;
+        color: $reverse-font-color;
+    }
+
+}
+
+h3 {
+    font-size: 3.2rem;
+    color: $heighlight-font-color;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    padding: 2px;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
