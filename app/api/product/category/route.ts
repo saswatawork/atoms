@@ -1,20 +1,20 @@
 import { NextResponse } from "next/server"
-import { AppDataSource } from "../AppDataSource";
-import { Product } from ".";
+import { AppDataSource } from "../../AppDataSource";
+import { ProductCategory } from "..";
 
-const ProductRepo = AppDataSource.getRepository(Product);
+const ProductCategoryRepo = AppDataSource.getRepository(ProductCategory);
 
 /**
  * @swagger
  * tags: 
- *   name: Product
- *   desctription: Everything about Products
- * /api/product:
+ *   name: Product Category
+ *   desctription: Everything about Product Category
+ * /api/product/category:
  *   get:
  *     tags: 
- *       - Product
- *     description: Returns all products
- *     summary: Get all products
+ *       - Product Category
+ *     description: Returns all product category
+ *     summary: Get all product category
  *     responses:
  *       200:
  *         description: Success
@@ -23,7 +23,7 @@ const ProductRepo = AppDataSource.getRepository(Product);
  */
 export const GET = async (req: Request, res: Response) => {
     try {
-        const data = await ProductRepo.find();
+        const data = await ProductCategoryRepo.find();
         return NextResponse.json({ message: "OK", data }, { status: 200 });
     } catch (error) {
         return NextResponse.json({ message: "Error", error }, { status: 500 });
@@ -33,18 +33,18 @@ export const GET = async (req: Request, res: Response) => {
 
 /**
  * @swagger
- * /api/product:
+ * /api/product/category:
  *   post:
  *     tags: 
- *       - Product
- *     description: Add a new product
- *     summary: Add a product
+ *       - Product Category
+ *     description: Add a new product category
+ *     summary: Add a product category
  *     requestBody:
  *       required: true
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#components/schemas/Product'
+ *             $ref: '#components/schemas/ProductCategory'
  *     responses:
  *       200:
  *         description: Success
@@ -53,12 +53,11 @@ export const GET = async (req: Request, res: Response) => {
  */
 export const POST = async (req: Request, res: Response) => {
     try {
-        const { title, description, category } = await req.json();
-        const newProduct = new Product();
-        newProduct.title = title;
-        newProduct.description = description;
-        newProduct.category = category;
-        const data = await ProductRepo.save(newProduct);
+        const { name, description } = await req.json();
+        const newProductCategory = new ProductCategory();
+        newProductCategory.name = name;
+        newProductCategory.description = description;
+        const data = await ProductCategoryRepo.save(newProductCategory);
         return NextResponse.json({ message: "OK", data }, { status: 200 });
     } catch (error) {
         return NextResponse.json({ message: "Error", error }, { status: 500 });
@@ -73,17 +72,14 @@ export const POST = async (req: Request, res: Response) => {
  * @swagger
  * components:
  *   schemas:
- *     Product:
+ *     ProductCategory:
  *       type: object
  *       properties: 
- *         title:
+ *         name:
  *           type: string
- *         description: 
+ *         description:
  *           type: string
- *         category:
- *           type: number 
  *       example:
- *         title: This is an example product
- *         description: This is example product description
- *         category: 1     
+ *         name: Mobile 
+ *         description: This is a mobile category
  */

@@ -3,15 +3,11 @@ import { getApiDocs, initializeDataSource } from './utility';
 
 export default async function IndexPage() {
     const spec = await getApiDocs();
-    const isDataSourceInitialized = await initializeDataSource();
+    await initializeDataSource();
 
     return (
-        <>
-            {(spec && isDataSourceInitialized) ? (
-                <section className="container">
-                    <ReactSwagger spec={spec} />
-                </section>
-            ) : null}
-        </>
+        <section className="container">
+            <ReactSwagger spec={spec} />
+        </section>
     );
 }

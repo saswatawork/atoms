@@ -25,7 +25,7 @@ export class User {
     email!: string
 
     @Column({
-        length: 20,
+        length: 100,
     })
     password!: string
 }

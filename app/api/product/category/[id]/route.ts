@@ -1,23 +1,23 @@
 import { NextResponse } from "next/server"
-import { AppDataSource } from "../../AppDataSource";
-import { User } from "../User";
+import { AppDataSource } from "../../../AppDataSource";
+import { ProductCategory } from "../ProductCategory";
 
 
-const UserRepo = AppDataSource.getRepository(User)
+const ProductCategoryRepo = AppDataSource.getRepository(ProductCategory)
 
 /**
  * @swagger
- * /api/user/{id}:
+ * /api/product/category/{id}:
  *   put:
  *     tags: 
- *       - User
- *     summary: Update user details
- *     description: Updates a user
+ *       - Product Category
+ *     summary: Update product Category details
+ *     description: Updates a product Category
  *     parameters:
  *       - in: path
  *         required: true
  *         name: id
- *         description: User id
+ *         description: product Category id
  *         schema:
  *           type: string
  *     requestBody:
@@ -25,7 +25,7 @@ const UserRepo = AppDataSource.getRepository(User)
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#components/schemas/User'
+ *             $ref: '#components/schemas/ProductCategory'
  *     responses:
  *       200:
  *         description: Success
@@ -34,13 +34,12 @@ const UserRepo = AppDataSource.getRepository(User)
  */
 export const PUT = async (req: Request, { params: { id } }: { params: { id: number } }) => {
     try {
-        const { phone, email, password } = await req.json();
-        const user = await UserRepo.findOneBy({ id });
-        if (user) {
-            user.phone = phone;
-            user.email = email;
-            user.password = password;
-            const data = await UserRepo.save(user);
+        const { name, description } = await req.json();
+        const productCategory = await ProductCategoryRepo.findOneBy({ id });
+        if (productCategory) {
+            productCategory.name = name;
+            productCategory.description = description;
+            const data = await ProductCategoryRepo.save(productCategory);
             return NextResponse.json({ message: "OK", data }, { status: 200 });
         }
         return NextResponse.json({ message: "Not found" }, { status: 200 });
@@ -51,17 +50,17 @@ export const PUT = async (req: Request, { params: { id } }: { params: { id: numb
 
 /**
  * @swagger
- * /api/user/{id}:
+ * /api/product/category/{id}:
  *   delete:
  *     tags: 
- *       - User
- *     summary: Deletes a user
- *     description: Deletes a user
+ *       - Product Category
+ *     summary: Deletes a product Category
+ *     description: Deletes a product Category
  *     parameters:
  *       - in: path
  *         required: true
  *         name: id
- *         description: User id
+ *         description: Product Category id
  *         schema:
  *           type: string
  *     responses:
@@ -72,9 +71,9 @@ export const PUT = async (req: Request, { params: { id } }: { params: { id: numb
  */
 export const DELETE = async (req: Request, { params: { id } }: { params: { id: number } }) => {
     try {
-        const userToRemove = await UserRepo.findOneBy({ id });
-        if (userToRemove) {
-            await UserRepo.remove(userToRemove);
+        const productCategoryToRemove = await ProductCategoryRepo.findOneBy({ id });
+        if (productCategoryToRemove) {
+            await ProductCategoryRepo.remove(productCategoryToRemove);
             return NextResponse.json({ message: "OK" }, { status: 200 });
         }
         return NextResponse.json({ message: "Not found" }, { status: 200 });
@@ -82,3 +81,5 @@ export const DELETE = async (req: Request, { params: { id } }: { params: { id: n
         return NextResponse.json({ message: "Error", error }, { status: 500 });
     }
 }
+
+
