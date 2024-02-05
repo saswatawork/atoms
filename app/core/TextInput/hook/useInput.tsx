@@ -1,13 +1,5 @@
-import { ChangeEvent, Dispatch, InvalidEvent, SetStateAction, useState } from 'react'
-
-export interface InputControlProps {
-    value: string,
-    error: string,
-    onChange: (e: ChangeEvent<HTMLInputElement>) => void,
-    setError: Dispatch<SetStateAction<string>>,
-    onInvalid: (e: InvalidEvent<HTMLInputElement>) => void,
-    onInput: (e: ChangeEvent<HTMLInputElement>) => void,
-}
+import { ChangeEvent, InvalidEvent, useState } from 'react'
+import { InputControlProps } from '../type'
 
 export const useInput = (initialValue: string): InputControlProps => {
     const [value, setValue] = useState(initialValue)
