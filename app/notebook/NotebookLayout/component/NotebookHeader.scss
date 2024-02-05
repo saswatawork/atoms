@@ -10,7 +10,10 @@
            a,span{
              padding: 30px 20px 24px;
              display: block;
-            }
+            }            
+            a.active{
+                color: $highlight-color;
+             }
             .search_wrapper{
                 padding: 25px 20px 24px 20px;
             }

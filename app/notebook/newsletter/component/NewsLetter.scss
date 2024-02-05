@@ -1,0 +1,27 @@
+@import './../../globalcss/variable.scss';
+
+
+.news_letter{
+    form{
+        display: flex;
+        justify-content: left;
+    }
+    input{
+        background: $dark-base-color;
+        border: 1px solid $dark-base-color;
+        border-radius: 6px 0 0 6px;
+        padding: 5px 10px;
+        &:focus-visible{
+            border: 1px solid $dark-base-color;
+            outline: none;
+        }
+    }
+    button{        
+        background: $highlight-color;
+        border: 1px solid $highlight-color;
+        border-radius: 0 6px 6px 0;
+        color: $reverse-font-color;
+        padding: 5px 10px;
+    }
+
+}

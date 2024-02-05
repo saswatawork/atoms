@@ -1,0 +1,10 @@
+@import './../../globalcss/variable.scss';
+
+.tag_area{
+    padding:3px 3px 2px;
+    border-radius: 3px;
+    background: $highlight-color;
+    color: $reverse-font-color;
+    width: auto;
+    display: inline-block;
+}

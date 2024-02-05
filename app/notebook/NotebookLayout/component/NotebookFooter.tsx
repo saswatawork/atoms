@@ -9,7 +9,7 @@ export const NotebookFooter = ()=>{
         <footer className='notebook_footer'>
             <div className='footer_nav'>
                 <div>
-                    <h2><span>Note</span>book<b>.</b></h2>
+                    <h2><span>Note</span>Book<b>.</b></h2>
                     <p>Did you come here for something in particular or just general Riker</p>
                 </div>
                 <div>

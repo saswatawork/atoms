@@ -1,6 +1,6 @@
 @import "../../../notebook/globalcss/variable.scss";
 
-.SearchArea{
+.search_area{
     display: flex;
     justify-content: space-between;
     text-align: right;
@@ -15,7 +15,7 @@
             outline: none;
         }
     }
-    .hideSearchBox{
+    .hide_search_box{
         padding: 3px;
         transition: ease all 1s;
         input{
@@ -23,7 +23,7 @@
             visibility: hidden;
         }
     }
-    .showSearchBox{
+    .show_search_box{
         background:$highlight-color ;
         padding:0 3px 2px 3px;
         border-radius: 2px;
@@ -33,7 +33,7 @@
             visibility: visible;
         }
     }
-    .searchIcon{
+    .search_icon{
         cursor: pointer;
         padding: 3px 3px 0 0;
     }

@@ -1,0 +1,12 @@
+.user_avatar{
+    display: flex;
+    justify-content: left;
+    img{
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+    }
+    p{
+        margin: 5px;
+    }
+}

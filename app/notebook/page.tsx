@@ -1,8 +1,9 @@
 "use client"
+import { Home } from "./home"
 
 
 export default function DefaultPage() {
   return (
-   <div>Note book</div>
+  <Home/>
   )
 }

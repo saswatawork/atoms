@@ -1,0 +1,14 @@
+@import './../../globalcss/variable.scss';
+
+.user_post_detail{
+    display: flex;
+    justify-content: left;
+}
+.post_date,.post_time{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    p{
+        margin: 5px;
+    }
+}
