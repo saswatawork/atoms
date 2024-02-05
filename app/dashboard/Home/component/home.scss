@@ -1,0 +1,48 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.dashboardHome{
+    border:1px solid red;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    
+   
+}
+.dashboardContetnt{
+    border: 1px solid green;
+    column-gap: 10px;
+    row-gap: 10px; 
+ 
+}
+.contentArea{
+    display: grid;
+    gap:10px;
+    margin: 0 0 10px;
+}
+.contentBlocks{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat (3,1fr);
+    row-gap:10px;
+  div{
+    border:1px solid blue;
+    padding: 10px;
+  }
+
+}
+
+.blockChart{
+    display: grid;
+    grid-template-columns: 2fr 1fr ;
+  div{
+    border:1px solid blue;
+    padding:10px
+  }
+
+}
+.contentTable{
+    border:1px solid blue;
+    grid-template-columns: 1fr ;
+}

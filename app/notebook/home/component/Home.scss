@@ -1,0 +1,12 @@
+@import './../../globalcss/variable.scss';
+
+.coloured_section{
+    background: $light-base-color ;
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.default_section{
+    padding: 30px 10px;
+}

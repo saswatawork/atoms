@@ -3,6 +3,7 @@ $reverse-color: #ffffff;
 $default-font-color: #696F79;
 $heighlight-font-color: #000000;
 
+
 body {
     margin: 0;
     padding: 0;
@@ -31,9 +32,8 @@ p {
 }
 
 h2 {
-    display: flex;
-    gap: 1.6rem;
-    color: #DB4444;
+    
+    // color: #DB4444;
     font-size: 1.6rem;
     font-weight: 600;
     line-height: 125%;
@@ -43,7 +43,7 @@ h2 {
     &::before {
         content: '';
         display: block;
-        background-color: #DB4444;
+        // background-color: #DB4444;
         height: 4rem;
         width: 2rem;
     }

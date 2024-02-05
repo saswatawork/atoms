@@ -1,0 +1,25 @@
+@import './../../globalcss/variable.scss';
+
+.featured_post_area{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px ;
+    height: 300px;
+    overflow-y: auto;
+}
+::-webkit-scrollbar {
+    width: 3;
+  }
+   
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 6px $highlight-color;
+}
+::-webkit-scrollbar-thumb {
+    background: $highlight-color; 
+    border-radius: 10px;
+  }
+
+// .featured_post_area::-webkit-scrollbar-thumb {
+// background-color: darkgrey;
+// outline: 1px solid slategrey;
+// }

@@ -1,0 +1,88 @@
+@import './variable.scss';
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p,
+label {
+    font-size:1.2rem;
+    color: $default-font-color;
+}
+
+p {
+    margin: 1rem 0;
+}
+h1{
+    font-size: 2rem;
+    color: $highlight-font-color;
+    b{
+        color: $highlight-color;
+    }
+    span{
+        background-color: $highlight-color;
+        font-size: 2.4rem;
+        color: $reverse-font-color;
+    }
+    
+}
+h2 {
+    font-size: 1.4rem;
+    color: $highlight-font-color;
+    margin: 20px 0;
+    &::before{
+        display: none;
+    }
+    b{
+        color: $highlight-color;
+    }
+    span{
+        background-color: $highlight-color;
+        color: $reverse-font-color;
+    }
+
+}
+
+h3 {
+    font-size: 1.6rem;
+    color: $highlight-font-color;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    padding: 2px;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+

@@ -1,0 +1,40 @@
+@import "../../../notebook/globalcss/variable.scss";
+
+.search_area{
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    input{
+        background:none ;
+        color: $reverse-font-color;
+        border:none;
+        width: 100px;
+        padding: 0;
+        &:focus-visible{
+            border:none;
+            outline: none;
+        }
+    }
+    .hide_search_box{
+        padding: 3px;
+        transition: ease all 1s;
+        input{
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    .show_search_box{
+        background:$highlight-color ;
+        padding:0 3px 2px 3px;
+        border-radius: 2px;
+        transition: ease all 1s;
+        input{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    .search_icon{
+        cursor: pointer;
+        padding: 3px 3px 0 0;
+    }
+}
