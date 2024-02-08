@@ -1,2 +1,2 @@
 export { getApiDocs } from './getApiDocs';
-export { initializeDataSource } from './initializeDataSource';
+export { getRepo } from './getRepo';

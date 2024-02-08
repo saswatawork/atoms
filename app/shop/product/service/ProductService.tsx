@@ -1,5 +1,6 @@
+import { SHOP_API } from "../../config";
 
-const PRODUCT_API_PATH = "https://fakestoreapi.com/products"
+const PRODUCT_API_PATH = `${SHOP_API}/product`;
 
 export const getAllProducts = async () => {
     try {

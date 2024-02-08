@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server"
-import { AppDataSource } from "../../AppDataSource";
 import { ProductCategory } from "..";
+import { getRepo } from "../../utility";
 
-const ProductCategoryRepo = AppDataSource.getRepository(ProductCategory);
 
 /**
  * @swagger
@@ -23,8 +22,9 @@ const ProductCategoryRepo = AppDataSource.getRepository(ProductCategory);
  */
 export const GET = async (req: Request, res: Response) => {
     try {
+        const ProductCategoryRepo = await getRepo(ProductCategory);
         const data = await ProductCategoryRepo.find();
-        return NextResponse.json({ message: "OK", data }, { status: 200 });
+        return NextResponse.json(data, { status: 200 });
     } catch (error) {
         return NextResponse.json({ message: "Error", error }, { status: 500 });
     }
@@ -53,12 +53,13 @@ export const GET = async (req: Request, res: Response) => {
  */
 export const POST = async (req: Request, res: Response) => {
     try {
+        const ProductCategoryRepo = await getRepo(ProductCategory);
         const { name, description } = await req.json();
         const newProductCategory = new ProductCategory();
         newProductCategory.name = name;
         newProductCategory.description = description;
         const data = await ProductCategoryRepo.save(newProductCategory);
-        return NextResponse.json({ message: "OK", data }, { status: 200 });
+        return NextResponse.json(data, { status: 200 });
     } catch (error) {
         return NextResponse.json({ message: "Error", error }, { status: 500 });
     }

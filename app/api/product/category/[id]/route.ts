@@ -1,9 +1,6 @@
 import { NextResponse } from "next/server"
-import { AppDataSource } from "../../../AppDataSource";
 import { ProductCategory } from "../ProductCategory";
-
-
-const ProductCategoryRepo = AppDataSource.getRepository(ProductCategory)
+import { getRepo } from "@/app/api/utility";
 
 /**
  * @swagger
@@ -34,13 +31,14 @@ const ProductCategoryRepo = AppDataSource.getRepository(ProductCategory)
  */
 export const PUT = async (req: Request, { params: { id } }: { params: { id: number } }) => {
     try {
+        const ProductCategoryRepo = await getRepo(ProductCategory);
         const { name, description } = await req.json();
         const productCategory = await ProductCategoryRepo.findOneBy({ id });
         if (productCategory) {
             productCategory.name = name;
             productCategory.description = description;
             const data = await ProductCategoryRepo.save(productCategory);
-            return NextResponse.json({ message: "OK", data }, { status: 200 });
+            return NextResponse.json(data, { status: 200 });
         }
         return NextResponse.json({ message: "Not found" }, { status: 200 });
     } catch (error) {
@@ -71,6 +69,7 @@ export const PUT = async (req: Request, { params: { id } }: { params: { id: numb
  */
 export const DELETE = async (req: Request, { params: { id } }: { params: { id: number } }) => {
     try {
+        const ProductCategoryRepo = await getRepo(ProductCategory);
         const productCategoryToRemove = await ProductCategoryRepo.findOneBy({ id });
         if (productCategoryToRemove) {
             await ProductCategoryRepo.remove(productCategoryToRemove);
@@ -82,4 +81,33 @@ export const DELETE = async (req: Request, { params: { id } }: { params: { id: n
     }
 }
 
-
+/**
+ * @swagger
+ * /api/product/category/{id}:
+ *   get:
+ *     tags: 
+ *       - Product Category
+ *     description: Returns product category details
+ *     summary: Product category details
+ *     parameters:
+ *       - in: path
+ *         required: true
+ *         name: id
+ *         description: Product id
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Success
+ *       500:
+ *         description: Fail    
+ */
+export const GET = async (req: Request, { params: { id } }: { params: { id: number } }) => {
+    try {
+        const ProductRepo = await getRepo(ProductCategory);
+        const data = await ProductRepo.findOneBy({ id });
+        return NextResponse.json(data, { status: 200 });
+    } catch (error) {
+        return NextResponse.json({ message: "Error", error }, { status: 500 });
+    }
+}

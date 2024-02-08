@@ -1,9 +1,7 @@
 import { NextResponse } from "next/server"
-import { AppDataSource } from "../../AppDataSource";
 import { User } from "../User";
+import { getRepo } from "../../utility";
 
-
-const UserRepo = AppDataSource.getRepository(User)
 
 /**
  * @swagger
@@ -34,6 +32,7 @@ const UserRepo = AppDataSource.getRepository(User)
  */
 export const PUT = async (req: Request, { params: { id } }: { params: { id: number } }) => {
     try {
+        const UserRepo = await getRepo(User);
         const { phone, email, password } = await req.json();
         const user = await UserRepo.findOneBy({ id });
         if (user) {
@@ -41,7 +40,7 @@ export const PUT = async (req: Request, { params: { id } }: { params: { id: numb
             user.email = email;
             user.password = password;
             const data = await UserRepo.save(user);
-            return NextResponse.json({ message: "OK", data }, { status: 200 });
+            return NextResponse.json(data, { status: 200 });
         }
         return NextResponse.json({ message: "Not found" }, { status: 200 });
     } catch (error) {
@@ -72,12 +71,44 @@ export const PUT = async (req: Request, { params: { id } }: { params: { id: numb
  */
 export const DELETE = async (req: Request, { params: { id } }: { params: { id: number } }) => {
     try {
+        const UserRepo = await getRepo(User);
         const userToRemove = await UserRepo.findOneBy({ id });
         if (userToRemove) {
             await UserRepo.remove(userToRemove);
             return NextResponse.json({ message: "OK" }, { status: 200 });
         }
         return NextResponse.json({ message: "Not found" }, { status: 200 });
+    } catch (error) {
+        return NextResponse.json({ message: "Error", error }, { status: 500 });
+    }
+}
+
+/**
+ * @swagger
+ * /api/user/{id}:
+ *   get:
+ *     tags: 
+ *       - User
+ *     description: Returns user details
+ *     summary: User details
+ *     parameters:
+ *       - in: path
+ *         required: true
+ *         name: id
+ *         description: Product id
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Success
+ *       500:
+ *         description: Fail    
+ */
+export const GET = async (req: Request, { params: { id } }: { params: { id: number } }) => {
+    try {
+        const ProductRepo = await getRepo(User);
+        const data = await ProductRepo.findOneBy({ id });
+        return NextResponse.json(data, { status: 200 });
     } catch (error) {
         return NextResponse.json({ message: "Error", error }, { status: 500 });
     }

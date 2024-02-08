@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server"
-import { AppDataSource } from "../AppDataSource";
 import { Product } from ".";
+import { getRepo } from "../utility";
 
-const ProductRepo = AppDataSource.getRepository(Product);
 
 /**
  * @swagger
@@ -23,8 +22,9 @@ const ProductRepo = AppDataSource.getRepository(Product);
  */
 export const GET = async (req: Request, res: Response) => {
     try {
+        const ProductRepo = await getRepo(Product);
         const data = await ProductRepo.find();
-        return NextResponse.json({ message: "OK", data }, { status: 200 });
+        return NextResponse.json(data, { status: 200 });
     } catch (error) {
         return NextResponse.json({ message: "Error", error }, { status: 500 });
     }
@@ -53,13 +53,14 @@ export const GET = async (req: Request, res: Response) => {
  */
 export const POST = async (req: Request, res: Response) => {
     try {
+        const ProductRepo = await getRepo(Product);
         const { title, description, category } = await req.json();
         const newProduct = new Product();
         newProduct.title = title;
         newProduct.description = description;
         newProduct.category = category;
         const data = await ProductRepo.save(newProduct);
-        return NextResponse.json({ message: "OK", data }, { status: 200 });
+        return NextResponse.json(data, { status: 200 });
     } catch (error) {
         return NextResponse.json({ message: "Error", error }, { status: 500 });
     }

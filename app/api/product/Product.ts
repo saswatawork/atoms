@@ -12,6 +12,12 @@ export class Product {
     @Column("text")
     description!: string
 
+    @Column('double')
+    price!: number
+
+    @Column()
+    rating!: string
+
     @ManyToOne(() => ProductCategory)
     @JoinColumn()
     category!: Number
