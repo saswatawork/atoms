@@ -9,6 +9,6 @@ export interface ProductType {
     image: string,
     description: string;
     price: number;
-    rating: Rating;
+    rating: string;
     title: string
 }

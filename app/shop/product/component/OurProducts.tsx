@@ -5,7 +5,7 @@ import { SHOP_PATH } from "../../config";
 
 export const OurProducts = (): JSX.Element => {
     const { ourProducts } = useOurProducts();
-
+    console.log({ ourProducts })
     return (
         <ProductList heading="Our Products" subHeading="Explore Our Products">
             {ourProducts.map(product => <Product key={product.title} data={product} />)}

@@ -1,11 +1,8 @@
 import { NextResponse } from "next/server"
 import bcrypt from 'bcrypt';
-import { AppDataSource } from "../../AppDataSource";
 import { User } from "../User";
 import { HTTP_STATUS } from "../../config/httpStatus";
-
-
-const UserRepo = AppDataSource.getRepository(User)
+import { getRepo } from "../../utility";
 
 /**
  * @swagger
@@ -29,10 +26,10 @@ const UserRepo = AppDataSource.getRepository(User)
  */
 export const POST = async (req: Request) => {
     try {
-        console.log("req before")
+        const UserRepo = await getRepo(User);
         const { email, password } = await req.json();
         const user = await UserRepo.findOneBy({ email });
-        console.log("user", user)
+
         if (!user) {
             return NextResponse.json({ message: "User doesn't exist" }, { status: HTTP_STATUS.BadRequest });
         }
