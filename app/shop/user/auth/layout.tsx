@@ -14,6 +14,8 @@ export default function RootLayout({
                     priority
                     src={Shop}
                     alt="Shop"
+                    layout='responsive'
+
                 />
             </div>
             <section className="ls__form">

@@ -23,7 +23,7 @@ export const Header = (): JSX.Element => {
                     <li><Link href={SHOP_PATH}>Home</Link></li>
                     <li><Link href={`${SHOP_PATH}/about`}>About</Link></li>
                     <li><Link href={`${SHOP_PATH}/contact`}>Contact</Link></li>
-                    <li><Link href={`${SHOP_PATH}/user/sign-up`}>Sign Up</Link></li>
+                    <li><Link href={`${SHOP_PATH}/user/auth/sign-up`}>Sign Up</Link></li>
                 </ul>
 
                 <div className="header__menu-search">

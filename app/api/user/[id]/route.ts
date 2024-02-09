@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server"
-import { User } from "../User";
+import { User } from "../../entity/User";
 import { getRepo } from "../../utility";
 
 
