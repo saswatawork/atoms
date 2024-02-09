@@ -29,3 +29,11 @@ export class User {
     })
     password!: string
 }
+
+export interface UserData {
+    id?: number;
+    name?: string;
+    email: string;
+    phone: string;
+    password: string;
+}

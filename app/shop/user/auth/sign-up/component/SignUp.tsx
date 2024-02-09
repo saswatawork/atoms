@@ -18,7 +18,7 @@ export const SignUp = (): JSX.Element => {
             <SignUpForm onSignUp={onSignUp} signUpState={signUpState} />
             <div className="sign-up__button">
                 <span>or</span>
-                <a href={`${SHOP_PATH}/user/login`}>
+                <a href={`${SHOP_PATH}/user/auth/login`}>
                     <Button type="button" theme={BUTTON_THEME.SECONDARY}> Login </Button>
                 </a>
             </div>

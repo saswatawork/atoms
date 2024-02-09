@@ -1,9 +1,8 @@
 import { TextInputProps, useInput } from "@/app/core/TextInput";
 import { CheckBoxProps, useCheckBox } from "@/app/core/CheckBox";
 import { useRouter } from 'next/navigation'
-
-import { addUser } from "../../service";
 import { SHOP_PATH } from "@/app/shop/config";
+import { addUser } from "../../../service/UserService";
 
 export interface SignUpState {
     email: TextInputProps,
@@ -62,7 +61,7 @@ export const useSignUp = () => {
         try {
             const addedUser = await addUser(user);
             if (addedUser) {
-                router.push(`${SHOP_PATH}/user/login`)
+                router.push(`${SHOP_PATH}/user/auth/login`)
             }
         } catch (error) {
             console.error(error)
