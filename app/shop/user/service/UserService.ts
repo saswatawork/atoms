@@ -1,6 +1,6 @@
-import { User } from "../type";
+import { User } from "../type/UserType";
 
-const USER_API_PATH = "https://fakestoreapi.com/users"
+const USER_API_PATH = "http://localhost:3001/users"
 
 export const addUser = async (user: User) => {
     try {

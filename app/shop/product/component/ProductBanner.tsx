@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Banner } from "@/app/core/Icons";
 import "./ProductBanner.scss"
 
-export const ProductBanner = (): JSX.Element => {
+export const ProductBanner = () => {
     return (
         <div className="product-banner">
             <Image

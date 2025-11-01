@@ -1,5 +1,7 @@
 import { FormEvent } from "react";
-import { TextInput, CheckBox, Button } from "@/app/core";
+import { TextInput } from "@/app/core/TextInput/component/TextInput";
+import { Button } from "@/app/core/Button/component/Button";
+import { CheckBox } from "@/app/core/CheckBox/component/CheckBox";
 import "./SignUpForm.scss";
 
 interface SignUpFormProps {

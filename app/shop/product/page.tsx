@@ -1,7 +1,5 @@
-"use client"
-
-import { ProductHome } from ".";
-import { MainContainer } from "../shopLayout";
+import { MainContainer } from "../shopLayout/component/MainContainer";
+import { ProductHome } from "./component/ProductHome";
 
 export default function ProductHomePage() {
     return (

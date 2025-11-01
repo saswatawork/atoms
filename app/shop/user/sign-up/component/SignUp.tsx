@@ -1,7 +1,8 @@
-import { Button, SignUpForm } from "@/app/core";
-import { useSignUp } from "../hook";
+import { Button } from "@/app/core/Button/component/Button";
+import { SignUpForm } from "@/app/core/SignUpForm/component/SignUpForm";
 import { SHOP_PATH } from "@/app/shop/config";
-import { BUTTON_THEME } from "@/app/core/Button";
+import { BUTTON_THEME } from "@/app/core/Button/constant";
+import { useSignUp } from "../hook/useSignUp";
 import "./SignUp.scss";
 
 export const SignUp = (): JSX.Element => {

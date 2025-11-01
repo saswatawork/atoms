@@ -1,7 +1,9 @@
-'use client'
-
-import { Categories, CategoryList } from "../../category"
-import { BestSellingProducts, OurProducts, ProductBanner } from "../../product"
+import { Categories } from "../../category/component/Categories";
+import { CategoryList } from "../../category/component/CategoryList";
+import { BestSellingProducts } from "../../product/component/BestSellingProducts";
+import { FlashSale } from "../../product/component/FlashSale";
+import { OurProducts } from "../../product/component/OurProducts";
+import { ProductBanner } from "../../product/component/ProductBanner";
 import "./ShopHome.scss";
 
 export const ShopHome = () => {
@@ -14,7 +16,7 @@ export const ShopHome = () => {
 
       <BestSellingProducts />
       <Categories />
-      {/* <FlashSale /> */}
+      <FlashSale />
       <OurProducts />
 
       {/* <section className="new-arrival">

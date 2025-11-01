@@ -8,7 +8,7 @@ interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
     theme?: BUTTON_THEME
 }
 
-export const Button = ({ children, type = 'button', theme = BUTTON_THEME.PRIMIARY, onClick, ...props }: ButtonProps): JSX.Element => {
+export const Button = ({ children, type = 'button', theme = BUTTON_THEME.PRIMIARY, onClick, ...props }: ButtonProps) => {
 
     return (
         <button onClick={onClick} className={classNames("button", theme)} {...props}> {children} </button>

@@ -1,9 +1,10 @@
-import { TextInputProps, useInput } from "@/app/core/TextInput";
-import { CheckBoxProps, useCheckBox } from "@/app/core/CheckBox";
-import { useRouter } from 'next/navigation'
-
-import { addUser } from "../../service";
 import { SHOP_PATH } from "@/app/shop/config";
+import { TextInputProps } from "@/app/core/TextInput/type/TextInputType";
+import { useCheckBox } from "@/app/core/CheckBox/hook/useCheckBox";
+import { CheckBoxProps } from "@/app/core/CheckBox/type/CheckBoxType";
+import { useInput } from "@/app/core/TextInput/hook/useInput";
+import { useRouter } from 'next/navigation'
+import { addUser } from "../../service/UserService";
 
 export interface SignUpState {
     email: TextInputProps,

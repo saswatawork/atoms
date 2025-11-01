@@ -1,11 +1,12 @@
 import { SHOP_PATH } from "@/app/shop/config";
-import { Phone, Computer, SmartWatch, Camera, HeadPhone, Gaming } from "@/app/core/Icons";
+import { Phone } from "@/app/core/Icons";
 import { Category } from "./Category";
-import { useCategories } from "../hook";
+import { getCategories } from "../service/CategoryService";
+import { CategoryType } from "../type/CategoryType";
 import "./Categories.scss";
 
-export const Categories = (): JSX.Element => {
-    const { categories } = useCategories()
+export const Categories = async () => {
+    const categories: CategoryType[] = await getCategories();
 
     return (
         <section className="categories">
@@ -13,8 +14,8 @@ export const Categories = (): JSX.Element => {
             <h3>Browse By Categories</h3>
             <div className='categories__items'>
                 {categories.map(category => (
-                    <a href={`${SHOP_PATH}/category/${category}`}>
-                        <Category name={category} icon={Phone} />
+                    <a href={`${SHOP_PATH}/category/${category.id}`} key={category.id} className="categories__link">
+                        <Category name={category.name} icon={Phone} />
                     </a>
                 ))}
             </div>

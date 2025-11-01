@@ -1,5 +1,5 @@
 
-const CATEGORY_API_PATH = "https://fakestoreapi.com/products/categories"
+const CATEGORY_API_PATH = "http://localhost:3001/categories"
 
 export const getCategories = async () => {
     try {

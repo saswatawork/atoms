@@ -1,4 +1,5 @@
-import { TextInputProps, useInput } from "@/app/core/TextInput";
+import { useInput } from "@/app/core/TextInput/hook/useInput";
+import { TextInputProps } from "@/app/core/TextInput/type/TextInputType";
 
 export interface LoginState {
     email: TextInputProps,

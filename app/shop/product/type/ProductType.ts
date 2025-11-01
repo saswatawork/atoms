@@ -10,5 +10,5 @@ export interface ProductType {
     description: string;
     price: number;
     rating: string;
-    title: string
+    name: string
 }
