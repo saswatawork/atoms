@@ -1,6 +1,5 @@
-import { FormError } from "@/app/core/Error";
-import { InputControlProps } from "../hook/useInput";
 import { InputHTMLAttributes } from "react";
+import { InputControlProps } from "../type/TextInputType";
 import './TextInput.scss';
 
 interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {

@@ -1,6 +1,4 @@
-'use client'
-
-import { MainContainer } from "../shopLayout"
+import { MainContainer } from "../shopLayout/component/MainContainer";
 
 export default function ContactHome() {
     return (

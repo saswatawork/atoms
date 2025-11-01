@@ -1,5 +1,5 @@
 import { ChangeEvent, InvalidEvent, useState } from 'react'
-import { InputControlProps } from '../type'
+import { InputControlProps } from '../type/TextInputType'
 
 export const useInput = (initialValue: string): InputControlProps => {
     const [value, setValue] = useState(initialValue)

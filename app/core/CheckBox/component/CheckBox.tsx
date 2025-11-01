@@ -1,5 +1,5 @@
 
-import { FormError } from "@/app/core/Error";
+import { FormError } from "@/app/core/Error/component/FormError";
 import { CheckBoxProps } from "../type/CheckBoxType";
 import "./CheckBox.scss";
 

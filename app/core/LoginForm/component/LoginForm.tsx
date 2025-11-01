@@ -1,7 +1,7 @@
-import { Button } from "@/app/core/Button";
-import { TextInput } from "@/app/core/TextInput";
-import "./LoginForm.scss"
 import { FormEvent } from "react";
+import { Button } from "@/app/core/Button/component/Button";
+import { TextInput } from "@/app/core/TextInput/component/TextInput";
+import "./LoginForm.scss"
 
 
 interface LoginFormProps {

@@ -7,7 +7,7 @@ interface ProductListProps {
     subHeading?: string;
 }
 
-export const ProductList = ({ children, heading, subHeading }: ProductListProps): JSX.Element => {
+export const ProductList = ({ children, heading, subHeading }: ProductListProps) => {
     return (
         <section className="product-list">
             {heading && <h2>{heading}</h2>}

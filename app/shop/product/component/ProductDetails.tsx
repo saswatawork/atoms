@@ -1,11 +1,16 @@
 import Image from 'next/image';
-import { useProductDetails } from "../hook/useProductDetails"
-import { ProductType } from '..';
+import { getProductDetails } from '../service/ProductService';
+import { ProductType } from '../type/ProductType';
 import "./ProductDetails.scss";
 
-export function ProductDetails({ productId }: { productId: string }) {
-    const { productDetails } = useProductDetails(productId);
-    const { id, category, image, description, price, rating: { count, rate }, title } = productDetails as ProductType;
+export async function ProductDetails({ productId }: { productId: string }) {
+    const productDetails: ProductType = await getProductDetails(productId);
+    const { id, category, image, description, price, rating, name } = productDetails;
+    const isRatingObject = (rating: unknown): rating is { count: number; rate: number } =>
+        typeof rating === 'object' && rating !== null && 'count' in rating && 'rate' in rating;
+
+    const count = isRatingObject(rating) ? rating.count : 0;
+    const rate = isRatingObject(rating) ? rating.rate : 0;
 
 
     return (
@@ -66,7 +71,7 @@ export function ProductDetails({ productId }: { productId: string }) {
             </div>
             <div className="product-details__info">
                 <div>
-                    <h4>{title}</h4>
+                    <h4>{name}</h4>
                     <div className="product-details__info-rating">
                         <div className="product-details__info-rating-rate">{rate} ({count})</div> |
                         <div className="product-details__info-rating-stock"></div>

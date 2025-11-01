@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SHOP_PATH } from "../../config";
+import { SHOP_PATH } from "@/app/shop/config";
 import "./Header.scss";
 
 export const Header = (): JSX.Element => {
